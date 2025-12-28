@@ -1,0 +1,6 @@
+<ul>
+      <li *ngFor="let user of users">
+        {{ user.name }}
+        <button (click)="deleteUser.emit(user.id)">Delete</button>
+      </li>    
+</ul>

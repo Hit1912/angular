@@ -1,0 +1,14 @@
+<h2>Order Items Form</h2>
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+<div formArrayName="items">
+<div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" >
+<label>Product Name:</label>
+<input type="text" formControlName="productName" placeholder="Enter product name">
+<button type="button" (click)="addItem()"> Add Item</button>
+<button type="button" (click)="removeItem(i)">Remove Item</button>
+</div></div><br>
+<button type="submit">Submit Order</button>
+</form>
+<hr>
+<h3>Order Data:</h3>
+<pre>{{ orderForm.value | json }}</pre>

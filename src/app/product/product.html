@@ -1,0 +1,7 @@
+<h2>Product Page</h2>
+<button (click)="showProduct()">Show Product Details</button>
+<div *ngIf="display">
+<p><strong>ID:</strong> {{ product.id }}</p>
+<p><strong>Name:</strong> {{ product.pname }}</p>
+<p><strong>Price:</strong> ₹{{ product.price }}</p>
+</div>

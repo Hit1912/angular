@@ -1,0 +1,19 @@
+<h2>Simple Reactive Form Example</h2>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+<div>
+<label>Name:</label>
+<input formControlName="name" placeholder="Enter your name"><br><br>
+<label>Email:</label>
+<input formControlName="email" placeholder="Enter your email"><br><br>
+<label>Hobby:</label>
+<input formControlName="hobby" placeholder="Enter your hobby"><br><br>
+<button type="submit">Submit</button>
+</div>
+</form>
+<hr>
+<div *ngIf="data">
+<h3>Submitted Data:</h3>
+<p><strong>Name:</strong> {{ data.name }}</p>
+<p><strong>Email:</strong> {{ data.email }}</p>
+<p><strong>Hobby:</strong> {{ data.hobby }}</p>
+</div>
